@@ -34,6 +34,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .page.theme_dark .header__theme-menu {
@@ -89,6 +90,5 @@
 
 .page.page.theme_dark .link:focus-visible {
   border: none;
-  outline: none;
   border: 1px solid var(--text-color);
 }
