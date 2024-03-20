@@ -1,14 +1,14 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
- color: var(--text-color);
- font-family: var(--main-font, serif);
- background-color: var(--bg-color);
- /* Min-inline-size: 375px; */
- background-image: url(../images/cover-image-dark.png);
- background-size: cover;
- background-position: center;
- background-repeat: no-repeat;
+  color: var(--text-color);
+  font-family: var(--main-font, serif);
+  background-color: var(--bg-color);
+  /* Min-inline-size: 375px; */
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -33,7 +33,7 @@
   left: 305px;
 }
 
-.header::before{
+.header::before {
   content: "";
   width: 25px;
   color: var(--accent-color);
@@ -46,7 +46,7 @@
   left: 340px;
 }
 
-.header::after{
+.header::after {
   content: "";
   width: 25px;
   color: var(--accent-color);
@@ -61,7 +61,7 @@
 
 .header_rec::after {
   content: "";
-  color: var( --subtitle-bg-color);
+  color: var(--subtitle-bg-color);
   background-color: var(--subtitle-bg-color);
   box-shadow: 0px 0px 4px 2px rgba(255, 0, 112, 1);
   position: absolute;
@@ -71,7 +71,6 @@
   top: 5px;
   left: 41px;
   border-radius: 3px;
-
 }
 
 @media (768px <= width < 1024px) {
@@ -101,7 +100,6 @@
 }
 
 @media (width >= 1024px) {
-
   .header::before {
     top: 25px;
     left: 988px;
@@ -129,7 +127,7 @@
 }
 
 .title {
-  font-family: 'IBM Plex mono', serif;
+  font-family: "IBM Plex mono", serif;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   color: var(--title-color);
@@ -142,10 +140,9 @@
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-
 }
 .title-decor {
-  font-family: 'IBM Plex Mono', serif;
+  font-family: "IBM Plex Mono", serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -174,7 +171,6 @@
   list-style-type: none;
 }
 
-
 @media (width >= 1024px) {
   .header__theme-menu-list {
     flex-direction: row;
@@ -184,7 +180,6 @@
     align-self: start;
     justify-self: center;
   }
-
 }
 
 .page.page.theme_auto .header__theme-menu-button {
@@ -213,7 +208,6 @@
 .page.page.theme_auto .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
   pointer-events: none;
-  
 }
 
 .main-content {
@@ -251,10 +245,10 @@
 
   .second.content {
     grid-template-rows: min-content min-content auto;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .second.content .subtitle{
+  .second.content .subtitle {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-column-end: 1;
@@ -283,8 +277,6 @@
   .third-text.content-text {
     grid-column-start: 3;
   }
-
-
 }
 
 .subtitle {
@@ -329,10 +321,10 @@
 
   .second.content {
     grid-template-rows: min-content min-content 1fr min-content 1fr min-content 1fr;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .second.content .subtitle{
+  .second.content .subtitle {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-column-end: 1;
@@ -344,13 +336,11 @@
   .second.content .title-decor {
     grid-column-start: 1;
     grid-column-end: 4;
-
   }
 
   .second.content .content-text {
     grid-column-start: 1;
     grid-column-end: 4;
-
   }
 }
 
@@ -368,7 +358,7 @@
 }
 
 .link {
-  text-shadow:2px 1px var(--accent-color);
+  text-shadow: 2px 1px var(--accent-color);
   text-decoration: none;
 }
 
@@ -423,13 +413,12 @@
 }
 
 @media (768px <= width < 1024px) {
-
   .third.content .title-decor .normal {
     margin: 0;
   }
 
   .fourth.content {
-   display: block;
+    display: block;
   }
 
   .gallery {
@@ -437,97 +426,95 @@
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(3, min-content);
     grid-template-areas:
-    "sunset sunset ice-cream"
-    "tape books ice-cream"
-    "tape street street";
-    }
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
 
   .sunset {
     grid-area: sunset;
     width: 479px;
     height: 192px;
   }
-  
+
   .ice-cream {
     grid-area: ice-cream;
     width: 229px;
     height: 441px;
   }
-  
+
   .tape {
     grid-area: tape;
     width: 229px;
     height: 568px;
   }
-  
+
   .books {
     grid-area: books;
     width: 230px;
     height: 230px;
   }
-  
+
   .street {
     grid-area: street;
     width: 479px;
     height: 318px;
   }
-
 }
 
-  @media (width >= 1024px) {
+@media (width >= 1024px) {
+  .fourth.content .title-decor {
+    margin-bottom: 20px;
+  }
 
-    .fourth.content .title-decor {
-      margin-bottom: 20px;
-    }
+  .third.content .title-decor .normal {
+    margin: 0;
+  }
 
-    .third.content .title-decor .normal {
-      margin: 0;
-    }
-  
-    .fourth.content {
-     display: block;
-    }
-  
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(3, min-content);
-      grid-template-rows: repeat(3, min-content);
-      grid-template-areas:
+  .fourth.content {
+    display: block;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
       "sunset sunset ice-cream"
       "tape books ice-cream"
       "tape street street";
-      gap: 20px 20px;
-      }
-  
-    .sunset {
-      grid-area: sunset;
-      width: 649px;
-      height: 260px;
-    }
-    
-    .ice-cream {
-      grid-area: ice-cream;
-      width: 315px;
-      height: 595px;
-    }
-    
-    .tape {
-      grid-area: tape;
-      width: 315px;
-      height: 768px;
-    }
-    
-    .books {
-      grid-area: books;
-      width: 315px;
-      height: 315px;
-    }
-    
-    .street {
-      grid-area: street;
-      width: 649px;
-      height: 428px;
-    }
+    gap: 20px 20px;
+  }
+
+  .sunset {
+    grid-area: sunset;
+    width: 649px;
+    height: 260px;
+  }
+
+  .ice-cream {
+    grid-area: ice-cream;
+    width: 315px;
+    height: 595px;
+  }
+
+  .tape {
+    grid-area: tape;
+    width: 315px;
+    height: 768px;
+  }
+
+  .books {
+    grid-area: books;
+    width: 315px;
+    height: 315px;
+  }
+
+  .street {
+    grid-area: street;
+    width: 649px;
+    height: 428px;
+  }
 }
 
 .footer {
@@ -575,7 +562,7 @@
 }
 
 @media (768px <= width < 1024px) {
-  .footer { 
+  .footer {
     padding-top: 149px;
     padding-left: 25px;
   }
@@ -583,7 +570,6 @@
   .footer::before {
     top: 4853px;
     left: 734px;
-
   }
 
   .footer::after {
@@ -592,7 +578,7 @@
   }
 }
 
-@media ( width >= 1024px) {
+@media (width >= 1024px) {
   .footer-title {
     font-size: 157px;
     padding-top: 47px;
@@ -602,12 +588,10 @@
   .footer::before {
     top: 4265px;
     left: 989px;
-
   }
 
   .footer::after {
     top: 4875px;
     left: 12px;
   }
-
 }
