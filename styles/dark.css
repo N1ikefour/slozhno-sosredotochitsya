@@ -3,48 +3,20 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme-dark {
-  --main-font: IBM Plex Mono;
-  --accent-color: #ff0070;
-  --bg-color: rgba(0, 0, 40, 1);
-  --text-color: rgba(241, 178, 206, 1);
-  --title-color: rgba(219, 0, 255, 1);
-  --subtitle-bg-color: rgba(255, 0, 112, 1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-font: IBM Plex Mono;
-    --accent-color: #ff0070;
-    --bg-color: rgba(0, 0, 40, 1);
-    --text-color: rgba(241, 178, 206, 1);
-    --title-color: rgba(219, 0, 255, 1);
-    --subtitle-bg-color: rgba(255, 0, 112, 1);
-  }
-}
-
-.page.theme_dark {
-  --main-font: IBM Plex Mono;
-  --accent-color: #ff0070;
-  --bg-color: rgba(0, 0, 40, 1);
-  --text-color: rgba(241, 178, 206, 1);
-  --title-color: rgba(219, 0, 255, 1);
-  --subtitle-bg-color: rgba(255, 0, 112, 1);
-  background-image: url(../images/cover-image-dark.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
 
 .page.theme_dark .header__theme-menu {
   color: var(--accent-color);
   font-family: var(--main-font);
 }
 
-.header__theme-menu-list {
-  display: flex;
-  list-style-type: none;
+.page.theme_dark .decorated-zone::before {
+  border-right: 1px solid var(--subtitle-bg-color);
+  border-top: 1px solid var(--subtitle-bg-color);
+}
+
+.page.theme_dark .decorated-zone::after {
+  border-left: 1px solid var(--subtitle-bg-color);
+  border-bottom: 1px solid var(--subtitle-bg-color);
 }
 
 .page.page.theme_dark .header__theme-menu-button_active {
