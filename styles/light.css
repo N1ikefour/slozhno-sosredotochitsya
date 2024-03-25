@@ -92,7 +92,6 @@
 
 .page.page.theme_light .link:focus-visible {
   border: none;
-  border: 1px solid var(--text-color);
 }
 
 .page.theme_light .footer-title {

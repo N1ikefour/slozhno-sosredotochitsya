@@ -557,16 +557,13 @@
     margin-bottom: 20px;
   }
 
-  .images.content {
-    margin-top: 0;
-  }
-
   .fish-concentration.content {
     margin-top: 0px;
   }
 
   .images.content {
     display: block;
+    margin-top: 0;
   }
 
   .sunset {
