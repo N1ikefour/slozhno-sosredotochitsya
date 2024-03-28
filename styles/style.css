@@ -306,7 +306,6 @@
 }
 
 .page.page.theme_auto .link:focus-visible {
-  border: none;
   border: 1px solid var(--text-color);
 }
 
@@ -597,7 +596,6 @@
 }
 
 .page.page.theme_dark .link:focus-visible {
-  border: none;
   border: 1px solid var(--text-color);
 }
 /* Конец темной темы */
