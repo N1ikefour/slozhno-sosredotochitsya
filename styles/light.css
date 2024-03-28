@@ -3,8 +3,16 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
-
+:root.page.theme_light {
+  --main-font: "IBM Plex Mono", monospace;
+  --accent-color: #ff0070;
+  --bg-color: rgba(241, 178, 206, 1);
+  --text-color: rgba(53, 52, 48, 1);
+  --title-color: rgba(255, 194, 230, 1);
+  --subtitle-bg-color: rgba(255, 141, 203, 1);
+  --border-color: rgba(53, 52, 48, 1);
+  --tabs-color: rgba(53, 52, 48, 1);
+}
 
 .page.theme_light {
   --main-font: "IBM Plex Mono", monospace;
@@ -14,49 +22,46 @@
   --title-color: rgba(255, 194, 230, 1);
   --subtitle-bg-color: rgba(255, 141, 203, 1);
   background-image: url(../images/cover-image-light.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
+  --border-color: rgba(53, 52, 48, 1);
+  --tabs-color: rgba(53, 52, 48, 1);
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 }
-.page.theme_light .header_rec {
+
+.header_rec {
   display: none;
 }
 
+.header__theme-menu-button {
+  color: var(--tabs-color);
+}
+
 .page.theme_light .decorated-zone::before {
-  border-right: 1px solid var(--text-color);
-  border-top: 1px solid var(--text-color);
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .page.theme_light .decorated-zone::after {
-  border-left: 1px solid var(--text-color);
-  border-bottom: 1px solid var(--text-color);
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header__theme-menu {
-  color: var(--text-color);
+  color: var(--tabs-color);
   font-family: var(--main-font);
 }
 
-.page.page.theme_light .header__theme-menu-button_active {
-  border: 1px solid var(--text-color);
-  pointer-events: none;
-}
-
-.page.page.theme_light .header__theme-menu-button:hover {
+.page.page .header__theme-menu-button:hover {
   border: 1px solid rgba(50, 49, 45, 0.4);
   cursor: pointer;
 }
 
-.page.page.theme_light .header__theme-menu-button:focus-visible {
+.page.page .header__theme-menu-button:focus-visible {
   outline: none;
   border: none;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--tabs-color);
 }
 
 .link:focus-visible {
@@ -65,7 +70,7 @@
   border-bottom: 1px solid var(--text-color);
 }
 
-.header__theme-menu-button {
+/* .header__theme-menu-button {
   background-color: initial;
   border: none;
   width: 70px;
@@ -75,6 +80,10 @@
   font-weight: 400;
   letter-spacing: 0em;
   align-self: end;
+} */
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--tabs-color);
 }
 
 .page.theme_light .subtitle {
@@ -91,7 +100,7 @@
 }
 
 .page.page.theme_light .link:focus-visible {
-  border: none;
+  border: 1px solid var(--text-color);
 }
 
 .page.theme_light .footer-title {
@@ -106,6 +115,22 @@
     --text-color: rgba(53, 52, 48, 1);
     --title-color: rgba(255, 194, 230, 1);
     --subtitle-bg-color: rgba(255, 141, 203, 1);
+    --border-color: rgba(53, 52, 48, 1);
   }
+  .page {
+    background-image: url(../images/cover-image-light.png);
+  }
+  .subtitle {
+    color: var(--text-color);
+  }
+
+  .header__theme-menu-button {
+    color: var(--text-color);
+  }
+
+  .header__theme-menu-button_active {
+  border: 1px solid var(--text-color);
+  pointer-events: none;
+}
 }
 

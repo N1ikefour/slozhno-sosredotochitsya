@@ -1,22 +1,24 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  --main-font: "IBM Plex Mono", monospace;
-  --accent-color: #ff0070;
-  --bg-color: rgba(0, 0, 40, 1);
-  --text-color: rgba(241, 178, 206, 1);
-  --title-color: rgba(219, 0, 255, 1);
-  --subtitle-bg-color: rgba(255, 0, 112, 1);
   color: var(--text-color);
-  font-family: var(--main-font);
-  background-color: var(--bg-color);
-  /* Min-inline-size: 375px; */
-  background-image: url(../images/cover-image-dark.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.header__theme-menu-button {
+  background-color: initial;
+  border: none;
+  width: 70px;
+  color: var(--tabs-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0em;
+  align-self: end;
 }
 
 .header {
@@ -47,8 +49,8 @@
   color: var(--accent-color);
   height: 25px;
   font-size: 18px;
-  border-right: 1px solid var(--subtitle-bg-color);
-  border-top: 1px solid var(--subtitle-bg-color);
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
   position: absolute;
   top: 10px;
   right: 10px;
@@ -60,8 +62,8 @@
   color: var(--accent-color);
   height: 25px;
   font-size: 18px;
-  border-left: 1px solid var(--subtitle-bg-color);
-  border-bottom: 1px solid var(--subtitle-bg-color);
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   position: absolute;
   bottom: 10px;
   left: 10px;
@@ -98,8 +100,13 @@
   }
 
   .header_rec {
-    top: 2.01vh;
-    left: 89.3vw;
+    top: 20px;
+    right: 48px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
   }
 
   .decorated-zone::after {
@@ -137,7 +144,7 @@
 
 .header__theme-menu {
   justify-self: end;
-  color: var(--accent-color);
+  color: var(--tabs-color);
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
@@ -153,27 +160,17 @@
   padding-bottom: 14px;
 }
 
-.page.page.theme_auto .header__theme-menu-button {
-  background-color: initial;
-  border: none;
-  width: 70px;
-  color: var(--accent-color);
-  font-family: var(--main-font);
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0em;
-  align-self: end;
-}
+ 
 
-.page.page.theme_auto .header__theme-menu-button:hover {
+ .header__theme-menu-button:hover {
   border: 1px solid rgba(255, 0, 112, 0.4);
   cursor: pointer;
 }
 
-.page.page.theme_auto .header__theme-menu-button:focus-visible {
+ .header__theme-menu-button:focus-visible {
   outline: none;
   border: none;
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--tabs-color);
 }
 
 .link:focus-visible {
@@ -182,8 +179,8 @@
   border-bottom: 1px solid var(--text-color);
 }
 
-.page.page.theme_auto .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
+ .header__theme-menu-button_active {
+  border: 1px solid var(--tabs-color);
   pointer-events: none;
 }
 
@@ -196,6 +193,7 @@
   display: grid;
   margin-right: 10px;
   margin-left: 10px;
+  max-width: 100%;
 }
 
 .subtitle {
@@ -324,7 +322,7 @@
   margin: 0;
 }
 
-.title-decor.margin20 {
+.title-decor.big-margin {
   margin-bottom: 20px;
 }
 
@@ -346,30 +344,30 @@
 }
 
 .sunset {
-  width: 355px;
-  height: 142px;
+  max-width: 100%;
+  min-height: 100%;
 }
 
 .ice-cream {
-  width: 355px;
-  height: 355px;
+  max-width: 100%;
+  min-height: 100%;
   object-fit: cover;
 }
 
 .tape {
-  width: 355px;
-  height: 237px;
+  max-width: 100%;
+  min-height: 100%;
   object-fit: cover;
 }
 
 .books {
-  width: 355px;
-  height: 355px;
+  max-width: 100%;
+  min-height: 100%;
 }
 
 .street {
-  width: 355px;
-  height: 237px;
+  max-width: 100%;
+  min-height: 100%;
 }
 
 @media (width >= 768px) {
@@ -377,7 +375,7 @@
     margin: 0;
   }
 
-  .title-decor.margin20 {
+  .title-decor.big-margin {
     margin-bottom: 20px;
   }
 
@@ -392,7 +390,6 @@
     display: block;
   }
   .gallery {
-    grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(3, min-content);
     grid-template-areas:
       "sunset sunset ice-cream"
@@ -403,32 +400,22 @@
 
   .sunset {
     grid-area: sunset;
-    width: 479px;
-    height: 192px;
   }
 
   .ice-cream {
     grid-area: ice-cream;
-    width: 229px;
-    height: 441px;
   }
 
   .tape {
     grid-area: tape;
-    width: 229px;
-    height: 568px;
   }
 
   .books {
     grid-area: books;
-    width: 230px;
-    height: 230px;
   }
 
   .street {
     grid-area: street;
-    width: 479px;
-    height: 318px;
   }
 }
 
@@ -447,18 +434,13 @@
   font-weight: 700;
   line-height: 95.7px;
   text-align: left;
-  color: rgba(219, 0, 255, 1);
+  color: var(--title-color);
   text-shadow: 2px 2px var(--accent-color);
 }
 
 @media (width >= 768px) {
   .footer {
     margin-top: 30px;
-  }
-
-  .decorated-zone::before {
-    top: 1.9vh;
-    left: 93.9vw;
   }
 
   .decorated-zone::after {
@@ -476,13 +458,8 @@
     font-size: 157px;
   }
 
-  .margin20.title-decor {
+  .big-margin.title-decor {
     margin-bottom: 20px;
-  }
-
-  .decorated-zone::before {
-    top: 20px;
-    left: 979px;
   }
 
   .decorated-zone::after {
@@ -492,19 +469,10 @@
 }
 
 @media (width >= 1024px) {
-  .decorated-zone::before {
-    top: 2.5vh;
-    left: 95.5vw;
-  }
 
   .header_rec::after {
     top: 7px;
     left: 41px;
-  }
-
-  .header_rec {
-    top: 2.7vh;
-    left: 92.1vw;
   }
 
   .decorated-zone::after {
@@ -549,8 +517,9 @@
   }
 
   .container {
-    grid-template-columns: repeat(3, 315px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    max-width: 100%;
   }
 
   .images.content .title-decor {
@@ -566,40 +535,15 @@
     margin-top: 0;
   }
 
-  .sunset {
-    width: 649px;
-    height: 260px;
-  }
-
-  .ice-cream {
-    width: 315px;
-    height: 595px;
-  }
-
-  .tape {
-    width: 315px;
-    height: 768px;
-  }
-
-  .books {
-    width: 315px;
-    height: 315px;
-  }
-
-  .street {
-    width: 649px;
-    height: 428px;
-  }
-
 }
 
 /* Для темной темы */
 
 
-.page.theme_dark .header__theme-menu {
+/* .page.theme_dark .header__theme-menu {
   color: var(--accent-color);
   font-family: var(--main-font);
-}
+} */
 
 .page.theme_dark .decorated-zone::before {
   border-right: 1px solid var(--subtitle-bg-color);

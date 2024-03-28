@@ -4,28 +4,50 @@
   переключая тему
 */
 
-:root.page.theme_dark {
+:root.theme_dark {
   --main-font: "IBM Plex Mono", monospace;
   --accent-color: #ff0070;
   --bg-color: rgba(0, 0, 40, 1);
   --text-color: rgba(241, 178, 206, 1);
   --title-color: rgba(219, 0, 255, 1);
   --subtitle-bg-color: rgba(255, 0, 112, 1);
+  --border-color: #ff0070;
+  --tabs-color: #ff0070;
+}
+
+.page.theme_dark {
+  background-image: url(../images/cover-image-dark.png);
+
   } 
 
-.page.theme_dark .header__theme-menu {
-  color: var(--accent-color);
+  .page.theme_dark .header_rec {
+    display: block;
+}
+.header_rec {
+  display: block;
+}
+
+  .page {
+    background-image: url(../images/cover-image-dark.png);
+  }
+
+  .subtitle {
+    color: var(--accent-color);
+  }
+
+ .header__theme-menu {
+  color: var(--tabs-color);
   font-family: var(--main-font);
 }
 
 .page.theme_dark .decorated-zone::before {
-  border-right: 1px solid var(--subtitle-bg-color);
-  border-top: 1px solid var(--subtitle-bg-color);
+  border-right: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-color);
 }
 
 .page.theme_dark .decorated-zone::after {
-  border-left: 1px solid var(--subtitle-bg-color);
-  border-bottom: 1px solid var(--subtitle-bg-color);
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .page.page.theme_dark .header__theme-menu-button_active {
@@ -60,3 +82,8 @@
 .page.page.theme_dark .link:focus-visible {
   border: 1px solid var(--text-color);
 }
+
+
+
+
+
