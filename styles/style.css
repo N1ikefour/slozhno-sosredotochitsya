@@ -6,6 +6,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-image: var(--bg-image);
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
@@ -34,13 +35,14 @@
 }
 
 .header_rec {
+  font:var(--main-font);
   display: block;
-  color: var(--accent-color);
+  color: var(--color-rec);
   position: absolute;
   width: 33px;
   height: 26px;
-  top: 12px;
-  right: 36px;
+  top: 10px;
+  right: 38px;
 }
 
 .decorated-zone::before {
@@ -71,9 +73,9 @@
 
 .header_rec::after {
   content: "";
-  color: var(--subtitle-bg-color);
-  background-color: var(--subtitle-bg-color);
-  box-shadow: 0px 0px 4px 2px rgba(255, 0, 112, 1);
+  color: var(--color-rec);
+  background-color: var(--color-rec);
+  box-shadow: 0px 0px 4px 2px var(--color-rec);
   position: absolute;
   font-size: 18px;
   width: 9px;
@@ -94,11 +96,6 @@
     padding-right: 2px;
   }
 
-  .header_rec::after {
-    top: 7px;
-    left: 41px;
-  }
-
   .header_rec {
     top: 20px;
     right: 48px;
@@ -110,7 +107,7 @@
   }
 
   .decorated-zone::after {
-    top: 979px;
+    bottom: 20px;
     left: 20px;
   }
 
@@ -136,7 +133,7 @@
   line-height: 23.4px;
   letter-spacing: 0em;
   text-align: left;
-  color: rgba(0, 0, 40, 1);
+  color: var(--subtitle-text-color);
   background-color: var(--subtitle-bg-color);
   justify-self: end;
   align-self: center;
@@ -158,12 +155,12 @@
   flex-direction: column;
   list-style-type: none;
   padding-bottom: 14px;
-}
+  }
 
  
 
  .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
+  border: 1px solid var(--border-color);
   cursor: pointer;
 }
 
@@ -176,7 +173,7 @@
 .link:focus-visible {
   border: none;
   outline: none;
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: currentColor;
 }
 
  .header__theme-menu-button_active {
@@ -203,8 +200,9 @@
   line-height: 23.4px;
   letter-spacing: 0em;
   text-align: left;
-  color: var(--accent-color);
+  color: var(--big-title-color);
   margin: 0 0 20px 0px;
+  
 }
 
 .content .title-decor {
@@ -297,15 +295,16 @@
 }
 
 .link {
-  text-shadow: 2px 1px var(--accent-color);
+  color: var(--link-color);
   text-decoration: none;
+  text-shadow: 2px 1px var(--link-shadow);
 }
 
-.page.page.theme_auto .link:hover {
+ .link:hover {
   border-bottom: 1px solid var(--text-color);
 }
 
-.page.page.theme_auto .link:focus-visible {
+.link:focus-visible {
   border: 1px solid var(--text-color);
 }
 
@@ -342,31 +341,11 @@
   justify-content: center;
 }
 
-.sunset {
-  max-width: 100%;
-  min-height: 100%;
-}
-
-.ice-cream {
-  max-width: 100%;
-  min-height: 100%;
+.illustrashion {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-
-.tape {
-  max-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-.books {
-  max-width: 100%;
-  min-height: 100%;
-}
-
-.street {
-  max-width: 100%;
-  min-height: 100%;
+  object-position:center;
 }
 
 @media (width >= 768px) {
@@ -375,10 +354,6 @@
   }
 
   .title-decor.big-margin {
-    margin-bottom: 20px;
-  }
-
-  .margin.title-decor {
     margin-bottom: 20px;
   }
 
@@ -442,10 +417,10 @@
     margin-top: 30px;
   }
 
-  .decorated-zone::after {
-    top: 979px;
-    left: 20px;
+  .images.content .title-decor {
+    margin-bottom: 20px;
   }
+
 }
 
 @media (width >= 1024px) {
@@ -461,24 +436,6 @@
     margin-bottom: 20px;
   }
 
-  .decorated-zone::after {
-    top: 723px;
-    left: 20px;
-  }
-}
-
-@media (width >= 1024px) {
-
-  .header_rec::after {
-    top: 7px;
-    left: 41px;
-  }
-
-  .decorated-zone::after {
-    top: 723px;
-    left: 20px;
-  }
-
   .title-decor {
     max-width: 491px;
   }
@@ -491,7 +448,6 @@
   .header__theme-menu-list {
     flex-direction: row;
     padding-top: 0;
-    padding-bottom: 0;
     margin-top: -3px;
     padding-left: 19px;
   }
@@ -521,10 +477,6 @@
     max-width: 100%;
   }
 
-  .images.content .title-decor {
-    margin-bottom: 20px;
-  }
-
   .fish-concentration.content {
     margin-top: 0px;
   }
@@ -536,66 +488,3 @@
 
 }
 
-/* Для темной темы */
-
-
-/* .page.theme_dark .header__theme-menu {
-  color: var(--accent-color);
-  font-family: var(--main-font);
-} */
-
-.page.theme_dark .decorated-zone::before {
-  border-right: 1px solid var(--subtitle-bg-color);
-  border-top: 1px solid var(--subtitle-bg-color);
-}
-
-.page.theme_dark .decorated-zone::after {
-  border-left: 1px solid var(--subtitle-bg-color);
-  border-bottom: 1px solid var(--subtitle-bg-color);
-}
-
-.page.page.theme_dark .header__theme-menu-button_active {
-  border: 1px solid var(--accent-color);
-  pointer-events: none;
-}
-
-.page.page.theme_dark .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.4);
-  cursor: pointer;
-}
-
-.page.page.theme_dark .header__theme-menu-button:focus-visible {
-  outline: none;
-  border: none;
-  border-bottom: 1px solid var(--accent-color);
-}
-
-.page.theme_dark .header__theme-menu-button {
-  background-color: initial;
-  border: none;
-  width: 70px;
-  color: var(--accent-color);
-  font-family: var(--main-font);
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0em;
-  align-self: end;
-}
-
-.page.theme_dark .subtitle {
-  color: var(--accent-color);
-}
-
-.page.theme_dark .link {
-  text-shadow: 2px 1px var(--accent-color);
-  text-decoration: none;
-}
-
-.page.page.theme_dark .link:hover {
-  border-bottom: 1px solid var(--text-color);
-}
-
-.page.page.theme_dark .link:focus-visible {
-  border: 1px solid var(--text-color);
-}
-/* Конец темной темы */

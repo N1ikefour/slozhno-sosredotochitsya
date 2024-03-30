@@ -3,7 +3,7 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.page.theme_light {
+.page.theme_light  {
   --main-font: "IBM Plex Mono", monospace;
   --accent-color: #ff0070;
   --bg-color: rgba(241, 178, 206, 1);
@@ -12,25 +12,34 @@
   --subtitle-bg-color: rgba(255, 141, 203, 1);
   --border-color: rgba(53, 52, 48, 1);
   --tabs-color: rgba(53, 52, 48, 1);
+  --bg-image: url(../images/cover-image-light.png);
+  --color-rec: transparent;
+  --subtitle-text-color: #353430;
+  --link-color: #353430;
+  --link-shadow: #FFC2E6;
+  --big-title-color: #353430;
 }
 
-.page.theme_light {
-  --main-font: "IBM Plex Mono", monospace;
-  --accent-color: #ff0070;
-  --bg-color: rgba(241, 178, 206, 1);
-  --text-color: rgba(53, 52, 48, 1);
-  --title-color: rgba(255, 194, 230, 1);
-  --subtitle-bg-color: rgba(255, 141, 203, 1);
-  background-image: url(../images/cover-image-light.png);
-  --border-color: rgba(53, 52, 48, 1);
-  --tabs-color: rgba(53, 52, 48, 1);
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-font: "IBM Plex Mono", monospace;
+    --accent-color: #ff0070;
+    --bg-color: rgba(241, 178, 206, 1);
+    --text-color: rgba(53, 52, 48, 1);
+    --title-color: rgba(255, 194, 230, 1);
+    --subtitle-bg-color: rgba(255, 141, 203, 1);
+    --border-color: rgba(53, 52, 48, 1);
+    --tabs-color: rgba(53, 52, 48, 1);
+    --color-rec: transparent;
+    --bg-image: url(../images/cover-image-light.png);
+    --subtitle-text-color: #353430;
+    --link-color: #353430;
+    --link-shadow: #FFC2E6;
+    --big-title-color: #353430;
+  }
 }
 
-.header_rec {
+/* .header_rec {
   display: none;
 }
 
@@ -70,17 +79,9 @@
   border-bottom: 1px solid var(--text-color);
 }
 
-/* .header__theme-menu-button {
-  background-color: initial;
-  border: none;
-  width: 70px;
-  color: var(--text-color);
-  font-family: var(--main-font);
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 0em;
-  align-self: end;
-} */
+.title-decor {
+  color: #353430;
+}
 
 .header__theme-menu-button_active {
   border: 1px solid var(--tabs-color);
@@ -90,8 +91,9 @@
   color: var(--text-color);
 }
 
-.page.page.theme_light .link {
+.page.theme_light .link {
   text-shadow: 2px 1px var(--subtitle-bg-color);
+  color:var(--text-color);
   text-decoration: none;
 }
 
@@ -105,19 +107,9 @@
 
 .page.theme_light .footer-title {
   color: var(--title-color);
-}
+} */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --main-font: "IBM Plex Mono", monospace;
-    --accent-color: #ff0070;
-    --bg-color: rgba(241, 178, 206, 1);
-    --text-color: rgba(53, 52, 48, 1);
-    --title-color: rgba(255, 194, 230, 1);
-    --subtitle-bg-color: rgba(255, 141, 203, 1);
-    --border-color: rgba(53, 52, 48, 1);
-  }
-  .page {
+  /* .page {
     background-image: url(../images/cover-image-light.png);
   }
   .subtitle {
@@ -127,10 +119,15 @@
   .header__theme-menu-button {
     color: var(--text-color);
   }
-
+   .link {
+   text-shadow: 2px 1px var(--subtitle-bg-color);
+  color:var(--text-color);
+  text-decoration: none;
+  }
   .header__theme-menu-button_active {
   border: 1px solid var(--text-color);
   pointer-events: none;
-}
-}
+  } */
+  
+
 

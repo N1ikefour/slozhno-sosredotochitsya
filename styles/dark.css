@@ -4,7 +4,7 @@
   переключая тему
 */
 
-:root.theme_dark {
+.page.theme_dark  {
   --main-font: "IBM Plex Mono", monospace;
   --accent-color: #ff0070;
   --bg-color: rgba(0, 0, 40, 1);
@@ -13,9 +13,15 @@
   --subtitle-bg-color: rgba(255, 0, 112, 1);
   --border-color: #ff0070;
   --tabs-color: #ff0070;
+  --bg-image: url(../images/cover-image-dark.png);
+  --color-rec: #ff0070;
+  --subtitle-text-color: #000028;
+  --link-color: #F1B2CE;
+  --link-shadow: #FF0070;
+  --big-title-color: #FF0070;
 }
 
-.page.theme_dark {
+/* .page.theme_dark {
   background-image: url(../images/cover-image-dark.png);
 
   } 
@@ -71,9 +77,6 @@
   color: var(--accent-color);
 }
 
-.page.theme_dark .link {
-  text-shadow: 2px 1px var(--accent-color);
-}
 
 .page.page.theme_dark .link:hover {
   border-bottom: 1px solid var(--text-color);
@@ -83,7 +86,23 @@
   border: 1px solid var(--text-color);
 }
 
+ .link {
+  text-shadow: 2px 1px var(--accent-color);
+  color: var(--text-color);
+}
 
+.page.theme_dark .title-decor {
+  color: #000028;
+}
 
+@media (prefers-color-scheme: dark) {
+ 
+  .header_rec {
+    display: block;
+  }
 
-
+  .title-decor {
+    color: #000028;
+}
+  
+} */

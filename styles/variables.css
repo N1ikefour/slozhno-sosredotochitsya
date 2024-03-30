@@ -11,4 +11,10 @@
   --subtitle-bg-color: rgba(255, 0, 112, 1);
   --border-color: #ff0070;
   --tabs-color: #ff0070;
+  --bg-image: url(../images/cover-image-dark.png);
+  --color-rec: #ff0070;
+  --subtitle-text-color: #000028;
+  --link-color: #F1B2CE;
+  --link-shadow: #FF0070;
+  --big-title-color: #FF0070;
 } 
