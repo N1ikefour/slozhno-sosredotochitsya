@@ -170,12 +170,6 @@
   border-bottom: 1px solid var(--tabs-color);
 }
 
-.link:focus-visible {
-  border: none;
-  outline: none;
-  border-bottom: currentColor;
-}
-
  .header__theme-menu-button_active {
   border: 1px solid var(--tabs-color);
   pointer-events: none;
@@ -306,6 +300,7 @@
 
 .link:focus-visible {
   border: 1px solid var(--text-color);
+  outline: none;
 }
 
 .normal.title-decor {
