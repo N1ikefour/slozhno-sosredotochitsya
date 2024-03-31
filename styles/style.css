@@ -35,7 +35,7 @@
 }
 
 .header_rec {
-  font:var(--main-font);
+  font-family:var(--main-font);
   display: block;
   color: var(--color-rec);
   position: absolute;

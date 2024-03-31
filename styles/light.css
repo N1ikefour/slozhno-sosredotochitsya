@@ -10,7 +10,7 @@
   --text-color: rgba(53, 52, 48, 1);
   --title-color: rgba(255, 194, 230, 1);
   --subtitle-bg-color: rgba(255, 141, 203, 1);
-  --border-color: rgba(53, 52, 48, 1);
+  --border-color: rgba(50, 49, 45, 0.4);
   --tabs-color: rgba(53, 52, 48, 1);
   --bg-image: url(../images/cover-image-light.png);
   --color-rec: transparent;
@@ -28,7 +28,7 @@
     --text-color: rgba(53, 52, 48, 1);
     --title-color: rgba(255, 194, 230, 1);
     --subtitle-bg-color: rgba(255, 141, 203, 1);
-    --border-color: rgba(53, 52, 48, 1);
+    --border-color: rgba(50, 49, 45, 0.4);
     --tabs-color: rgba(53, 52, 48, 1);
     --color-rec: transparent;
     --bg-image: url(../images/cover-image-light.png);

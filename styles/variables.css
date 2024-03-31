@@ -9,7 +9,7 @@
   --text-color: rgba(241, 178, 206, 1);
   --title-color: rgba(219, 0, 255, 1);
   --subtitle-bg-color: rgba(255, 0, 112, 1);
-  --border-color: #ff0070;
+  --border-color: rgba(255, 0, 112, 0.4);
   --tabs-color: #ff0070;
   --bg-image: url(../images/cover-image-dark.png);
   --color-rec: #ff0070;
